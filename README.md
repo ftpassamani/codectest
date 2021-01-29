@@ -40,6 +40,6 @@ Result:
 
 # Guideliness
 
-- Fork this repo and push your code when you are done
+- Fork this repository
 - Try not to spend more than 3 days on it
 - Use of TDD is encouraged
