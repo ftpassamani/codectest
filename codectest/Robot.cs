@@ -3,39 +3,46 @@ namespace codectest
 {
     public class Robot
     {
-        public EDirection ChangeDirection(EDirection direction, char leftRight)
-        {
-            EDirection ret;
+        public int X { get; set; }
+        public int Y { get; set; }
+        public EDirection Direction { get; set; }
 
-            switch (direction)
+        public Robot()
+        {
+            X = 1;
+            Y = 1;
+            Direction = EDirection.North;
+        }
+
+        public void ChangeDirection(char leftRight)
+        {
+            switch (this.Direction)
             {
                 case EDirection.North:
                     if (leftRight == 'L')
-                        ret = EDirection.West;
+                        Direction = EDirection.West;
                     else
-                        ret = EDirection.East;
+                        Direction = EDirection.East;
                     break;
                 case EDirection.South:
                     if (leftRight == 'L')
-                        ret = EDirection.East;
+                        Direction = EDirection.East;
                     else
-                        ret = EDirection.West;
+                        Direction = EDirection.West;
                     break;
                 case EDirection.East:
                     if (leftRight == 'L')
-                        ret = EDirection.North;
+                        Direction = EDirection.North;
                     else
-                        ret = EDirection.South;
+                        Direction = EDirection.South;
                     break;
                 default:
                     if (leftRight == 'L')
-                        ret = EDirection.South;
+                        Direction = EDirection.South;
                     else
-                        ret = EDirection.North;
+                        Direction = EDirection.North;
                     break;
             }
-            return ret;
         }
-
     }
 }

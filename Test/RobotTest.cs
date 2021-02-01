@@ -10,72 +10,80 @@ namespace Test
         public void ChangeDirectionNorthLeft()
         {
             var robot = new Robot();
-            var result = robot.ChangeDirection(EDirection.North, 'L');
+            robot.Direction = EDirection.North;
+            robot.ChangeDirection('L');
 
-            Assert.Equal(EDirection.West, result);
+            Assert.Equal(EDirection.West, robot.Direction);
         }
 
         [Fact]
         public void ChangeDirectionNorthRight()
         {
             var robot = new Robot();
-            var result = robot.ChangeDirection(EDirection.North, 'R');
+            robot.Direction = EDirection.North;
+            robot.ChangeDirection('R');
 
-            Assert.Equal(EDirection.East, result);
+            Assert.Equal(EDirection.East, robot.Direction);
         }
 
         [Fact]
         public void ChangeDirectionEastLeft()
         {
             var robot = new Robot();
-            var result = robot.ChangeDirection(EDirection.East, 'L');
+            robot.Direction = EDirection.East;
+            robot.ChangeDirection('L');
 
-            Assert.Equal(EDirection.North, result);
+            Assert.Equal(EDirection.North, robot.Direction);
         }
 
         [Fact]
         public void ChangeDirectionEastRight()
         {
             var robot = new Robot();
-            var result = robot.ChangeDirection(EDirection.East, 'R');
+            robot.Direction = EDirection.East;
+            robot.ChangeDirection('R');
 
-            Assert.Equal(EDirection.South, result);
+            Assert.Equal(EDirection.South, robot.Direction);
         }
 
         [Fact]
         public void ChangeDirectionSouthLeft()
         {
             var robot = new Robot();
-            var result = robot.ChangeDirection(EDirection.South, 'L');
+            robot.Direction = EDirection.South;
+            robot.ChangeDirection('L');
 
-            Assert.Equal(EDirection.East, result);
+            Assert.Equal(EDirection.East, robot.Direction);
         }
 
         [Fact]
         public void ChangeDirectionSouthRight()
         {
             var robot = new Robot();
-            var result = robot.ChangeDirection(EDirection.South, 'R');
+            robot.Direction = EDirection.South;
+            robot.ChangeDirection('R');
 
-            Assert.Equal(EDirection.West, result);
+            Assert.Equal(EDirection.West, robot.Direction);
         }
 
         [Fact]
         public void ChangeDirectionWestLeft()
         {
             var robot = new Robot();
-            var result = robot.ChangeDirection(EDirection.West, 'L');
+            robot.Direction = EDirection.West;
+            robot.ChangeDirection('L');
 
-            Assert.Equal(EDirection.South, result);
+            Assert.Equal(EDirection.South, robot.Direction);
         }
 
         [Fact]
         public void ChangeDirectionWestRight()
         {
             var robot = new Robot();
-            var result = robot.ChangeDirection(EDirection.West, 'R');
+            robot.Direction = EDirection.West;
+            robot.ChangeDirection('R');
 
-            Assert.Equal(EDirection.North, result);
+            Assert.Equal(EDirection.North, robot.Direction);
         }
     }
 }
