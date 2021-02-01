@@ -1,5 +1,4 @@
-﻿using System;
-namespace codectest
+﻿namespace App
 {
     public enum EDirection
     {

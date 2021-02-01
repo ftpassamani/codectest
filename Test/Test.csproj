@@ -14,6 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\codectest\codectest.csproj" />
+    <ProjectReference Include="..\App\App.csproj" />
   </ItemGroup>
 </Project>

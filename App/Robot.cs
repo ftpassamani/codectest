@@ -1,16 +1,19 @@
-﻿using System;
-namespace codectest
+﻿namespace App
 {
-    public class Robot
+    public class Robot : IRobot
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public int PositionX { get; set; }
+        public int PositionY { get; set; }
+        public int PlateauX { get; set; }
+        public int PlateauY { get; set; }
         public EDirection Direction { get; set; }
 
-        public Robot()
+        public Robot(int plateauX, int plateauY)
         {
-            X = 1;
-            Y = 1;
+            PositionX = 1;
+            PositionY = 1;
+            PlateauX = plateauX;
+            PlateauY = plateauY;
             Direction = EDirection.North;
         }
 
@@ -57,16 +60,20 @@ namespace codectest
             switch (this.Direction)
             {
                 case EDirection.North:
-                    Y++;
+                    if((PositionY + 1) >= 1 && (PositionY + 1) <= PlateauY)
+                        PositionY++;
                     break;
                 case EDirection.South:
-                    Y--;
+                    if ((PositionY - 1) >= 1 && (PositionY - 1) <= PlateauY)
+                        PositionY--;
                     break;
                 case EDirection.East:
-                    X++;
+                    if ((PositionX + 1) >= 1 && (PositionX + 1) <= PlateauX)
+                        PositionX++;
                     break;
                 default:
-                    X--;
+                    if ((PositionX - 1) >= 1 && (PositionX - 1) <= PlateauX)
+                        PositionX--;
                     break;
             }
         }
