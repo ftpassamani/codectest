@@ -51,5 +51,24 @@ namespace codectest
                     break;
             }
         }
+
+        public void MoveForward()
+        {
+            switch (this.Direction)
+            {
+                case EDirection.North:
+                    Y++;
+                    break;
+                case EDirection.South:
+                    Y--;
+                    break;
+                case EDirection.East:
+                    X++;
+                    break;
+                default:
+                    X--;
+                    break;
+            }
+        }
     }
 }

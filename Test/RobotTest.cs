@@ -6,6 +6,8 @@ namespace Test
 {
     public class RobotTest
     {
+        #region ChangeDirection
+
         [Fact]
         public void ChangeDirectionNorthLeft()
         {
@@ -85,5 +87,51 @@ namespace Test
 
             Assert.Equal(EDirection.North, robot.Direction);
         }
+
+        #endregion
+
+        #region MoveForward
+
+        [Fact]
+        public void MoveForwardNorth()
+        {
+            var robot = new Robot();
+            robot.Direction = EDirection.North;
+            robot.MoveForward();
+
+            Assert.Equal(2, robot.Y);
+        }
+
+        [Fact]
+        public void MoveForwardSouth()
+        {
+            var robot = new Robot();
+            robot.Direction = EDirection.South;
+            robot.MoveForward();
+
+            Assert.Equal(0, robot.Y);
+        }
+
+        [Fact]
+        public void MoveForwardEast()
+        {
+            var robot = new Robot();
+            robot.Direction = EDirection.East;
+            robot.MoveForward();
+
+            Assert.Equal(2, robot.X);
+        }
+
+        [Fact]
+        public void MoveForwardWest()
+        {
+            var robot = new Robot();
+            robot.Direction = EDirection.West;
+            robot.MoveForward();
+
+            Assert.Equal(0, robot.X);
+        }
+
+        #endregion
     }
 }
