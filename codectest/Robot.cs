@@ -14,33 +14,40 @@ namespace codectest
             Direction = EDirection.North;
         }
 
-        public void ChangeDirection(char leftRight)
+        public void TurnRight()
         {
             switch (this.Direction)
             {
                 case EDirection.North:
-                    if (leftRight == 'L')
-                        Direction = EDirection.West;
-                    else
-                        Direction = EDirection.East;
+                    Direction = EDirection.East;
                     break;
                 case EDirection.South:
-                    if (leftRight == 'L')
-                        Direction = EDirection.East;
-                    else
-                        Direction = EDirection.West;
+                    Direction = EDirection.West;
                     break;
                 case EDirection.East:
-                    if (leftRight == 'L')
-                        Direction = EDirection.North;
-                    else
-                        Direction = EDirection.South;
+                    Direction = EDirection.South;
                     break;
                 default:
-                    if (leftRight == 'L')
-                        Direction = EDirection.South;
-                    else
-                        Direction = EDirection.North;
+                    Direction = EDirection.North;
+                    break;
+            }
+        }
+
+        public void TurnLeft()
+        {
+            switch (this.Direction)
+            {
+                case EDirection.North:
+                    Direction = EDirection.West;
+                    break;
+                case EDirection.South:
+                    Direction = EDirection.East;
+                    break;
+                case EDirection.East:
+                    Direction = EDirection.North;
+                    break;
+                default:
+                    Direction = EDirection.South;
                     break;
             }
         }

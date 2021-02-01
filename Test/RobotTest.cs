@@ -11,7 +11,7 @@ namespace Test
         {
             var robot = new Robot();
             robot.Direction = EDirection.North;
-            robot.ChangeDirection('L');
+            robot.TurnLeft();
 
             Assert.Equal(EDirection.West, robot.Direction);
         }
@@ -21,7 +21,7 @@ namespace Test
         {
             var robot = new Robot();
             robot.Direction = EDirection.North;
-            robot.ChangeDirection('R');
+            robot.TurnRight();
 
             Assert.Equal(EDirection.East, robot.Direction);
         }
@@ -31,7 +31,7 @@ namespace Test
         {
             var robot = new Robot();
             robot.Direction = EDirection.East;
-            robot.ChangeDirection('L');
+            robot.TurnLeft();
 
             Assert.Equal(EDirection.North, robot.Direction);
         }
@@ -41,7 +41,7 @@ namespace Test
         {
             var robot = new Robot();
             robot.Direction = EDirection.East;
-            robot.ChangeDirection('R');
+            robot.TurnRight();
 
             Assert.Equal(EDirection.South, robot.Direction);
         }
@@ -51,7 +51,7 @@ namespace Test
         {
             var robot = new Robot();
             robot.Direction = EDirection.South;
-            robot.ChangeDirection('L');
+            robot.TurnLeft();
 
             Assert.Equal(EDirection.East, robot.Direction);
         }
@@ -61,7 +61,7 @@ namespace Test
         {
             var robot = new Robot();
             robot.Direction = EDirection.South;
-            robot.ChangeDirection('R');
+            robot.TurnRight();
 
             Assert.Equal(EDirection.West, robot.Direction);
         }
@@ -71,7 +71,7 @@ namespace Test
         {
             var robot = new Robot();
             robot.Direction = EDirection.West;
-            robot.ChangeDirection('L');
+            robot.TurnLeft();
 
             Assert.Equal(EDirection.South, robot.Direction);
         }
@@ -81,7 +81,7 @@ namespace Test
         {
             var robot = new Robot();
             robot.Direction = EDirection.West;
-            robot.ChangeDirection('R');
+            robot.TurnRight();
 
             Assert.Equal(EDirection.North, robot.Direction);
         }
